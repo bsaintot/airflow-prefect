@@ -5,7 +5,7 @@ from prefect_demo.tasks import read_column, concatenate_columns, transform, feat
     train
 
 
-with Flow("An example ML flow!") as flow:
+with Flow("An example machine learning flow!") as flow:
     columns = []
     for path in ['col1.csv', 'col2.csv', 'col3.csv', 'col4.csv', 'target.csv']:
         column = read_column('../data/' + path)

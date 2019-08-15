@@ -23,8 +23,10 @@ def transform(dataset: pd.DataFrame) -> pd.DataFrame:
 
 @task
 def features_extraction(transformed_dataset: pd.DataFrame) -> pd.DataFrame:
-    transformed_dataset["sepal_area"] = transformed_dataset["sepal_length"] * transformed_dataset["sepal_width"]
-    transformed_dataset["petal_area"] = transformed_dataset["petal_length"] * transformed_dataset["petal_width"]
+    transformed_dataset["sepal_area"] = transformed_dataset["sepal_length"] * \
+                                        transformed_dataset["sepal_width"]
+    transformed_dataset["petal_area"] = transformed_dataset["petal_length"] * \
+                                        transformed_dataset["petal_width"]
     return transformed_dataset.drop("target", axis=1)
 
 
