@@ -13,8 +13,8 @@ with Flow("An example ML flow!") as flow:
     dataset = concatenate_columns(columns)
     transformed_dataset = transform(dataset)
     features = features_extraction(transformed_dataset)
-    targets = target_extraction(transformed_dataset)
-    model = train(features, targets)
+    target = target_extraction(transformed_dataset)
+    model = train(features, target)
 
 
 def main():

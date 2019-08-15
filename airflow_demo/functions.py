@@ -28,7 +28,7 @@ def target_extraction(transformed_dataset: pd.DataFrame) -> pd.Series:
     return transformed_dataset["target"]
 
 
-def train(features: pd.DataFrame, target: pd.DataFrame) -> RandomForestClassifier:
+def train(features: pd.DataFrame, target: pd.Series) -> RandomForestClassifier:
     rf = RandomForestClassifier()
     rf.fit(features, target)
     return rf

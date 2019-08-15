@@ -2,7 +2,7 @@ import pandas as pd
 from pandas.util.testing import assert_frame_equal
 from prefect import Flow
 
-from prefect.main import concatenate_columns
+from prefect_demo.main import concatenate_columns
 
 
 def test_concatenate_columns_should_create_dataset_with_column_names():
