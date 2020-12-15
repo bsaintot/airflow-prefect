@@ -21,18 +21,17 @@ def concatenate_columns(columns_to_concat: List[pd.DataFrame]) -> pd.DataFrame:
 
 
 @task
-def features_extraction(transformed_dataset: pd.DataFrame) -> pd.DataFrame:
-    transformed_dataset['area'] = transformed_dataset['length'] * transformed_dataset['width']
-    return transformed_dataset.drop('target', axis=1)
+def features_extraction(dataset: pd.DataFrame) -> pd.DataFrame:
+    dataset['area'] = dataset['length'] * dataset['width']
+    return dataset.drop('target', axis=1)
 
 
 @task
-def target_extraction(transformed_dataset: pd.DataFrame) -> pd.Series:
-    return transformed_dataset['target']
+def target_extraction(dataset: pd.DataFrame) -> pd.Series:
+    return dataset['target']
 
 
 @task
-def train(features: pd.DataFrame, target: pd.Series) -> RandomForestClassifier:
+def train(features: pd.DataFrame, target: pd.Series) -> None:
     model = RandomForestClassifier()
     model.fit(features, target)
-    return model
