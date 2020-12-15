@@ -45,7 +45,7 @@ def train(features: pd.DataFrame, target: pd.Series) -> None:
 default_args = {'owner': 'airflow'}
 
 
-@dag(default_args=default_args, schedule_interval=timedelta(hours=1), start_date=days_ago(2))
+@dag(default_args=default_args, schedule_interval=timedelta(hours=1), start_date=days_ago(1))
 def training():
     columns = read_columns()
     dataset = concatenate_columns(columns)
