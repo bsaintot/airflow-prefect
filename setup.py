@@ -10,6 +10,5 @@ setup(
     packages=find_packages(),
     install_requires=['pandas >= 1.1.3',
                       'prefect == 0.13.19',
-                      'scikit-learn >= 0.23.2'
-                      ],
+                      'scikit-learn >= 0.23.2'],
 )
