@@ -2,7 +2,7 @@ import pandas as pd
 from pandas.util.testing import assert_frame_equal
 from prefect import Flow
 
-from prefect_demo.main import concatenate_columns
+from pipeline.train import concatenate_columns
 
 
 def test_concatenate_columns_should_create_dataset_with_column_names():
@@ -15,7 +15,7 @@ def test_concatenate_columns_should_create_dataset_with_column_names():
                                      'petal_width': [4, 4],
                                      'target': [5, 5]})
 
-    with Flow("An example test flow") as test_flow:
+    with Flow('An example test flow') as test_flow:
         # When
         actual = concatenate_columns(columns_to_concat)
     state = test_flow.run()
