@@ -1,5 +1,13 @@
 # Airflow 2.0 vs. Prefect
 
+This R&D / technical watch project was created to compare and benchmark 2 workflow management tools: Airflow 2.0 and Prefect.
+Following the [release of Airflow 2.0](https://airflow.apache.org/blog/airflow-two-point-oh-is-here/), this repository
+was used as an illustrative / sandbox environment to highlight the main differences that still exist between these solutions
+when it comes to the orchestration of machine learning workflows.
+
+You can follow the guidelines below to schedule and orchestrate a dummy data science training workflow based on the 
+[iris dataset](https://archive.ics.uci.edu/ml/datasets/iris). This will help you get an idea of the philosophy behind each tool.
+
 ## Prefect
 
 Before running the server for the first time, run the following command to configure Prefect for local orchestration:
